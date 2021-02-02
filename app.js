@@ -3,8 +3,8 @@ const os = require('os');
 
 console.log("Starting...");
 const handler = (req,res) => { 
- response.writeHead(200);  
- response.end("You've connected to " + os.hostname() + "\n")
+ res.writeHead(200);  
+ res.end("You've connected to " + os.hostname() + "\n")
 }
 const app = http.createServer(handler)
 app.listen(8080);
