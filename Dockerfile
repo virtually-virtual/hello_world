@@ -1,7 +1,4 @@
-FROM node:11.15.0
-COPY package-lock.json .
-COPY package.json .
-RUN npm install
+FROM node:12-alpine
 COPY . .
-EXPOSE 3000
-CMD ["node", "hello_world.js"]
+EXPOSE 8080
+CMD ["node", "app.js"]
